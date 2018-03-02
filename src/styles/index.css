@@ -6,3 +6,7 @@
 .buttons {
   margin-top: 2em;
 }
+
+.container-fluid {
+  margin-left: 10px;
+}
