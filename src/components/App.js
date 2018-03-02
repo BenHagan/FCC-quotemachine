@@ -16,13 +16,13 @@ class App extends Component {
       );
     }
     return (
-      <div className="container-fluid">
-        <h1 className="text-left">
-          Random Quote Machine <small>Free Code Camp</small>
-        </h1>
-        <div className="col-xs-2" />
-        <div className="col-xs-8">
-          <div className="row">
+      <div className="container w-75">
+        <div className="row">
+          <div className="col-12">
+            <h1>
+              Random Quote Machine
+              <small className="subhead p-2">Free Code Camp</small>
+            </h1>
             <div id="quote-box">
               <div id="text" className="quote">
                 {this.props.quote.quoteText}
@@ -30,7 +30,7 @@ class App extends Component {
               <div id="author" className="quote">
                 --{this.props.quote.quoteAuthor}
               </div>
-              <div className="row buttons">
+              <div className="buttons">
                 <button
                   onClick={() => {
                     this.props.fetchQuote();
@@ -43,7 +43,7 @@ class App extends Component {
                 </button>
                 <a
                   id="tweet-quote"
-                  className="btn btn-lg btn-info"
+                  className="btn btn-lg btn-info m-2"
                   href={`${baseURL}${tweet}`}
                 >
                   Tweet Quote
@@ -52,7 +52,6 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="col-xs-2" />
       </div>
     );
   }
